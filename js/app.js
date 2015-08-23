@@ -82,20 +82,30 @@ var player_width = 50;
 
 
 var Player = function(image,x,y,width,height){
+	/* This is a player class from where player object is instantiated.
+	* This object takes image name, x position, y position, widht and height of the object.
+	* This object method for showing the object on the screen with appropriate height and width from the Game super class.
+	* When player object is instantiated from this Class, score and lives are assigned to that object.
+	*/
 	Game.call(this,image,x,y,width,height);
 	this.score = 0;
 	this.lives = 5;
 }
 
+//Creating a prototype chain and delegating failed lookup methods to the Game.prototype.
 Player.prototype = Object.create(Game.prototype);
+
+//Adding .constructor property to the Player.prototype object.
 Player.prototype.constructor = Player;
 
+//Update method for the player. When player reaches the water it will reset the game.
 Player.prototype.update = function(){
 	if(player.y < 30) {
 		player.resetgame();
 	}
 }
 
+// This method is to handle incoming keyboard input. Based on the input value it will increase or reduce the x or y values.
 Player.prototype.handleInput = function(key){
 	if (key === "down" && player.y < 400){
 		player.y += 83;
@@ -111,6 +121,8 @@ Player.prototype.handleInput = function(key){
 	 }
 };
 
+//This is a collision detection method for the player object.
+//When enemy will coliide to the player, it will return true.
 Player.prototype.collide = function(object,object_width,object_height) {
 	if(object.x < (this.x + this.width) && (object.x + object_width) > this.x &&
 		object.y < (this.y + this.height) && (object_height + object.y) > this.y) {
@@ -118,11 +130,13 @@ Player.prototype.collide = function(object,object_width,object_height) {
 	}
 }
 
+//This method will reset the position of the player. This method will put the player to it's starting position.
 Player.prototype.resetgame = function () {
 	player.x = start_x;
 	player.y = start_y;
 }
 
+//This method will reset the player objects starting postion as well as its score and lives.
 Player.prototype.reset = function () {
 	player.x = start_x;
 	player.y = start_y;
@@ -142,8 +156,6 @@ document.addEventListener('keyup', function(e) {
 
 	player.handleInput(allowedKeys[e.keyCode]);
 });
-
-
 
 //Adding Gems to the screen
 var Gems = function(image,x,y,width,height) {
