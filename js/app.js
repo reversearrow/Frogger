@@ -156,13 +156,13 @@ document.addEventListener('keyup', function(e){
 	player.handleInput(allowedKeys[e.keyCode]);
 });
 
-
+//Instantiating the Enemies object
 for (i=0; i<4; i++){
 	x= Math.floor(Math.random() * (-200 - 70 + 1)) - 70;
 	y= Math.floor(Math.random() * (320 - 70 + 1)) + 70;
 	allEnemies.push(new Enemy("enemy-bug.png",x,y,50,50))
 }
-
+//Instantiating the Player object
 var player= new Player("char-boy.png",start_x,start_y,player_width,player_height);
 
 
