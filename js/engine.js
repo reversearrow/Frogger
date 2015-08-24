@@ -93,12 +93,13 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
+        if (player.lives != 0) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
         player.update();
+        }
     }
-
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
      * game tick (or loop of the game engine) because that's how games work -
@@ -150,10 +151,15 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
+        if (player.lives != 0) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
         player.render();
+        }
+        else {
+            document.getElementsByClassName("Game-Over")[0].style.display = 'block';
+        }
     }
 
     /* This function does nothing but it could have been a good place to

@@ -1,4 +1,17 @@
 body {
-    text-align: center;
+	text-align: center;
 }
+
+.Game-Over {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	height: 200px;
+	font-size: 26px;
+}
+
 
