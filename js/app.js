@@ -29,7 +29,7 @@ var Enemy= function(image,x,y,width,height){
 	* When enemy object is instantiated from this Class, random speed level from 1 to 5 is assigned to the object.
 	*/
 	Game.call(this,image,x,y,width,height);
-	this.speed= Math.floor((Math.random() * 5) + 1);
+	this.speed= Math.floor((Math.random() * 6) + 1);
 };
 
 //Creating a prototype chain and delegating failed look ups to Game.prototype.
@@ -165,6 +165,4 @@ for (i=0; i<6; i++){
 }
 //Instantiating the Player object
 var player= new Player("char-boy.png",START_X,START_Y,PLAYER_WIDTH,PLAYER_HEIGHT);
-
-
 
