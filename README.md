@@ -14,9 +14,9 @@ Resource Used to Complete this Project:
 
 1 ) Book called to understand Object Oriented part of the language : https://github.com/getify/You-Dont-Know-JS.       
 
-2 ) To understand collision detection : http://gamedevelopment.tutsplus.com/tutorials/collision-detection-with-the-separating-axis-theorem--gamedev-169       
+2 ) To understand collision detection algorithm : http://gamedevelopment.tutsplus.com/tutorials/collision-detection-with-the-separating-axis-theorem--gamedev-169       
 
-3 ) To understand collision 2D detection : https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection     
+3 ) To understand 2D collision detection : https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection     
 
 4 ) To understand Game Engine : http://jlongster.com/Making-Sprite-based-Games-with-Canvas        
 
