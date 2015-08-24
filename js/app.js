@@ -114,10 +114,10 @@ Player.prototype.handleInput= function(key){
 		player.y -= 83;
 	}
 	else if (key=== "right" && player.x < 600){
-		player.x += 100;
+		player.x += 101;
 	}
 	else if (key=== "left" && player.x > 0){
-		player.x -= 100;
+		player.x -= 101;
 	}
 };
 
