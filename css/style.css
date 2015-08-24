@@ -2,13 +2,3 @@ body {
     text-align: center;
 }
 
-#game{
-	margin: 0 auto;
-}
-
-#topbar{
-	height: 70px;
-	width: 505px;
-	background-color: gray;
-	margin: 0 auto;
-}
