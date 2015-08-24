@@ -157,10 +157,11 @@ document.addEventListener('keyup', function(e){
 });
 
 //Instantiating the Enemies object
-for (i=0; i<4; i++){
+var ENEMY_Y = 0
+for (i=0; i<6; i++){
 	x= Math.floor(Math.random() * (-200 - 70 + 1)) - 70;
-	y= Math.floor(Math.random() * (320 - 70 + 1)) + 70;
-	allEnemies.push(new Enemy("enemy-bug.png",x,y,50,50));
+	ENEMY_Y += 50;
+	allEnemies.push(new Enemy("enemy-bug.png",x,ENEMY_Y,68,68));
 }
 //Instantiating the Player object
 var player= new Player("char-boy.png",START_X,START_Y,PLAYER_WIDTH,PLAYER_HEIGHT);
