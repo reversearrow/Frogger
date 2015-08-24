@@ -73,12 +73,12 @@ Enemy.prototype.update= function(dt){
 // Place the player object in a variable called player
 
 //Starting x and y position for the player.
-var start_x= 300;
-var start_y= 400;
+var START_X= 300;
+var START_Y= 400;
 
 // Height and width of the player to check the collision against objects
-var player_height= 50;
-var player_width= 50;
+var PLAYER_HEIGHT= 50;
+var PLAYER_WIDTH= 50;
 
 
 var Player= function(image,x,y,width,height){
@@ -132,14 +132,14 @@ Player.prototype.collide= function(object,object_width,object_height){
 
 //This method will reset the position of the player. This method will put the player to it's starting position.
 Player.prototype.resetgame= function (){
-	player.x= start_x;
-	player.y= start_y;
+	player.x= START_X;
+	player.y= START_Y;
 };
 
 //This method will reset the player objects starting postion as well as its score and lives.
 Player.prototype.reset= function (){
-	player.x= start_x;
-	player.y= start_y;
+	player.x= START_X;
+	player.y= START_Y;
 	this.score= 0;
 	this.lives= 5;
 };
@@ -163,7 +163,7 @@ for (i=0; i<4; i++){
 	allEnemies.push(new Enemy("enemy-bug.png",x,y,50,50));
 }
 //Instantiating the Player object
-var player= new Player("char-boy.png",start_x,start_y,player_width,player_height);
+var player= new Player("char-boy.png",START_X,START_Y,PLAYER_WIDTH,PLAYER_HEIGHT);
 
 
 
