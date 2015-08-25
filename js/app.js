@@ -57,7 +57,7 @@ Enemy.prototype.update= function(dt){
 		player.resetgame();
 		player.lives -= 1;
 		if (player.lives=== 0){
-			console.log("Game Over");
+			document.getElementsByClassName("game-over")[0].style.display = 'block';
 		}
 	}
 };

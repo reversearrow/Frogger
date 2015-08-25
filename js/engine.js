@@ -157,9 +157,6 @@ var Engine = (function(global) {
         });
         player.render();
         }
-        else {
-            document.getElementsByClassName("Game-Over")[0].style.display = 'block';
-        }
     }
 
     /* This function does nothing but it could have been a good place to

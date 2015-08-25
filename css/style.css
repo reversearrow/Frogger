@@ -2,7 +2,7 @@ body {
 	text-align: center;
 }
 
-.Game-Over {
+.game-over {
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -13,5 +13,3 @@ body {
 	height: 200px;
 	font-size: 26px;
 }
-
-
