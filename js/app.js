@@ -100,24 +100,24 @@ Player.prototype.constructor= Player;
 
 //Update method for the player. When player reaches the water it will reset the game.
 Player.prototype.update= function(){
-	if(player.y < 30){
-		player.resetgame();
+	if(this.y < 30){
+		this.resetgame();
 	}
 };
 
 // This method is to handle incoming keyboard input. Based on the input value it will increase or reduce the x or y values.
 Player.prototype.handleInput= function(key){
-	if (key=== "down" && player.y < 400){
-		player.y += 83;
+	if (key=== "down" && this.y < 400){
+		this.y += 83;
 	}
-	else if (key=== "up" && player.y > 0){
-		player.y -= 83;
+	else if (key=== "up" && this.y > 0){
+		this.y -= 83;
 	}
-	else if (key=== "right" && player.x < 600){
-		player.x += 101;
+	else if (key=== "right" && this.x < 600){
+		this.x += 101;
 	}
-	else if (key=== "left" && player.x > 0){
-		player.x -= 101;
+	else if (key=== "left" && this.x > 0){
+		this.x -= 101;
 	}
 };
 
@@ -132,14 +132,14 @@ Player.prototype.collide= function(object,object_width,object_height){
 
 //This method will reset the position of the player. This method will put the player to it's starting position.
 Player.prototype.resetgame= function (){
-	player.x= START_X;
-	player.y= START_Y;
+	this.x= START_X;
+	this.y= START_Y;
 };
 
 //This method will reset the player objects starting postion as well as its score and lives.
 Player.prototype.reset= function (){
-	player.x= START_X;
-	player.y= START_Y;
+	this.x= START_X;
+	this.y= START_Y;
 	this.score= 0;
 	this.lives= 5;
 };
@@ -157,7 +157,7 @@ document.addEventListener('keyup', function(e){
 });
 
 //Instantiating the Enemies object
-var ENEMY_Y = 0
+var ENEMY_Y = 0;
 for (i=0; i<6; i++){
 	x= Math.floor(Math.random() * (-200 - 70 + 1)) - 70;
 	ENEMY_Y += 50;
